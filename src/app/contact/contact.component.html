@@ -1,0 +1,61 @@
+<mat-card-header>
+    <mat-toolbar class="toolbar">
+        <mat-card-title>Добавить контакт</mat-card-title>
+        <span class="toolbar-spacer"></span>
+        <mat-icon (click)="onNoClick()">cancel</mat-icon>
+    </mat-toolbar>
+</mat-card-header>
+<mat-card-content>
+    <div class="container">
+        <form [formGroup]="_contactForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/assets/1.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Имя</label>
+                        <input type="text" formControlName="FirstName" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Фамилия</label>
+                        <input type="text" formControlName="LastName" class="form-control">
+                    </div>
+                </div>
+                <div class="row">    
+                    <div class="col-md-6">
+                        <label>Дата Рождения</label>
+                        <input type="text" formControlName="Birthday" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Возраст</label>
+                        <input type="text" formControlName="Age" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Должность</label>
+                        <input type="text" formControlName="Position" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Адрес проживания</label>
+                        <input type="text" formControlName="Adress" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label>Удаленка</label>
+                        <mat-checkbox></mat-checkbox>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-success">
+                    <mat-icon>save</mat-icon>
+                </button>
+            </div>
+        </form>   
+    </div>
+</mat-card-content>
